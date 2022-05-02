@@ -1,0 +1,275 @@
+body {
+    margin-top : 20px;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+/* HEADER */
+
+header {
+    max-width: 1440px;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo . housings activities";
+}
+
+.navbar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    grid-area: logo; 
+}
+
+#navbar-item-housings{
+    grid-area: housings;
+}
+
+#navbar-item-activities{
+    grid-area: activities;
+}
+
+/* SEARCH SECTION */
+
+#search-section{
+    max-width: 1440px;
+    width: 95%;
+    margin: auto;
+  }
+
+#section-title{
+    margin-block : 10px;
+}
+
+#main-title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+}
+
+#search-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+}
+
+#search-bar i{
+    border: none;
+    border-radius: 12px 0px 0px 12px;
+    color: black;
+    background-color: grey;
+    padding: 17px;
+    cursor: pointer;
+}
+
+#search-bar input{
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 15px;
+    color: black;
+}
+
+#search-bar::placeholder {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+#search-bar input:focus {
+outline: 2px solid black;
+border-radius: 3px;
+z-index: 1;
+}
+
+#search-bar button{
+    border: none;
+    border-radius: 0 12px 12px 0;
+    background-color: rgb(3, 118, 250);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 17px;
+    cursor: pointer;
+}
+
+#filters-bar{
+    display: flex;
+    flex-direction: row;
+}
+
+#list-of-categories{
+    display: flex;
+    flex-direction: row;
+}
+
+#filters-title{
+padding : 10px 10px 10px 0;
+font-size: 16px;
+margin-right: -30px;
+}
+
+.category-filters{
+    border : 2px solid;
+    border-radius : 20px;
+    border-left: none;
+    padding-right: 10px;
+    cursor: pointer;
+    margin-inline:  10px;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.category-filters i{
+    border : rgba(255, 255, 255, 0.699);;
+    padding : 7px;
+    border-radius: 20px;
+    color : rgb(3, 118, 250);
+    background-color: rgb(112, 174, 255);
+    cursor: pointer;
+}
+
+#information i {
+    color: blue;
+    font-size: 14px;
+    padding: 5px 9px 5px 9px;
+    border: solid 1px black;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+/*  HOUSINGS SECTION  */
+
+#housings-section {
+    max-width: 1440px;
+    width: 95%;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#housings-section img{
+    max-width: 500px;
+}
+
+#housings-main-box{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #c2c2c2;
+    border-radius: 15px;
+    margin: 20px 0 20px 0;
+    flex:3;
+    height:fit-content;
+}
+
+h1#main-box-title{
+    margin-left: 30px;
+    margin-top: 40px;
+    display: flex;
+    }
+    
+
+.housing-boxes-container{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.housing-individual-big-box{
+    display : flex;
+    flex-direction: column;
+    align-items:flex-start;
+    border: solid white;
+    border-radius: 15px;
+    background-color: white;
+    max-height: 220px;
+    max-width: 270px;
+    margin: 0 10px 25px 10px;
+    cursor: pointer;
+}
+
+.housing-individual-big-box img {
+    height : 65%;
+    width : 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.big-box-text{
+    display : flex;
+    flex-direction:  column;
+    flex-wrap: wrap;
+    font-size : 12px;
+    margin-left: 10px;
+    line-height: 0.05em;
+}
+
+h2#unfolder{
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#housings-second-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #c2c2c2;
+    margin: 20px;
+    border-radius: 15px;
+    flex:1.3;
+    height : 655px;
+}
+
+h1#second-box-title{
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+}
+
+.housing-individual-little-box{
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 0 10px 10px 10px;
+    cursor: pointer;
+    height : 150px;
+    width: 350px;
+}
+
+.housing-individual-little-box img {
+    height : 100%;
+    width : 40%;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+}
+
+.little-box-text{
+    display : flex;
+    flex-direction:  column;
+    flex-wrap: wrap;
+    font-size : 12px;
+    margin-left: 10px;
+}
+
+
+/*  FOOTER  */
