@@ -2,7 +2,7 @@
 
 body {
 /*  font family à placer ici  */
-margin-top: 0px;
+margin: 0px;
 }
 
 a {
@@ -38,6 +38,7 @@ h2 {
 
 .header__logo img{
     margin-top:35px;
+    height: 65px;
 }
 
 #navbar-item-housings {
@@ -46,7 +47,6 @@ h2 {
 #navbar-item-activities {
     grid-area: activities;
 }
-
 
 .header__navbar-item{
 display: flex;
@@ -85,7 +85,7 @@ margin-left: 20px;
     margin-top: 30px;
 }
 
-.search__title__main {
+.search__title .main {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -10px;
@@ -147,19 +147,18 @@ margin-left: 20px;
     gap: 30px;
     align-items: center;
 }
-.search__filters__category{
+.search__filters .category{
     border : 2px solid grey;
     border-radius : 20px;
     border-left: none;
     cursor: pointer;
-    list-style-type: none;
     font-size: 12px;
     height: fit-content;
     width:max-content;
     padding: 0 20px 0 0;
 }
 
-.search__filters__category i{
+.search__filters .category i{
     padding : 7px;
     border-radius: 50%;
     border: solid 1px rgb(112, 174, 255);
@@ -192,7 +191,7 @@ margin-left: 20px;
 
 /*  HOUSINGS SECTION  */
 
-#housings-section{
+.housings{
     max-width: 1440px;
     width: 97%;
     margin: auto;
@@ -203,14 +202,13 @@ margin-left: 20px;
     "container1 container2";
 }
 
-#housings-section-container1 {
+.housings__container1 {
     grid-area: container1;
 }
 
-#housings-section-container2 {
+.housings__container2 {
     grid-area: container2;
 }
-
 
 #blue-star {
  color: blue;
@@ -221,37 +219,35 @@ margin-left: 20px;
 }
 
 
-/* housing container 1  */
-#housings-section-container1{
+/* housings container 1  */
+.housings__container1{
     display : flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex : 2.3;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 1px 1px 20px -10px black;
     padding : 0 10px 0 10px;
     background-color: grey;
 }
 
-#housings-section-container1 h1{
+.housings__container1 h1{
     margin-left: 10px;
     cursor: pointer;
 }
 
-#housings-section-container1 h2{
+.housings__container1 h2{
     margin-left: 10px;
     cursor: pointer;
     }
 
-#housings-section-container1 .boxes-container{
+.housings__container1 .six-boxes-pack{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-#housings-section-container1 .individual-boxes-from-boxes-container
-{
+.housings__container1 .six-boxes-pack .individual-box{
     flex:28%;
     border: solid white 5px;
     border-radius: 15px;
@@ -266,7 +262,7 @@ margin-left: 20px;
     cursor: pointer;
 }
 
-#housings-section-container1 .box-content {
+.housings__container1 .six-boxes-pack .individual-box .content{
     font-size: 12px;
     margin-left: 10px;
     padding: 5px 0 5px 0;
@@ -277,62 +273,61 @@ margin-left: 20px;
     flex-wrap: wrap;
 }
 
-#housings-section-container1 img{
+.housings__container1 img{
     height : 60%;
     width : 100%;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
 
-#housings-section-container1 .housing-title{
+.housings__container1 .six-boxes-pack .individual-box .content .title{
     margin-top:  5px;
 }
 
-#housings-section-container1 .housing-price{
+.housings__container1 .six-boxes-pack .individual-box .content .price{
     margin: 0;
 }
 
-#housings-section-container1 .housing-note{
+.housings__container1 .six-boxes-pack .individual-box .content .note{
     margin-bottom: 5px;
 }
 
-/* housing container 2  */
+/* housings container 2  */
 
-#housings-section-container2{
+.housings__container2{
     display : flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex : 1;
     box-shadow: 1px 1px 20px -10px black;
     border-radius: 15px;
     padding : 0 20px 15px 20px;
     background-color: grey;
 }
 
-#container2-title{
+.housings__container2 .title{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#container2-title h1{
+.housings__container2 .title h1{
     cursor: pointer;
     }
 
-#container2-title i{
-    font-size: 30px;
-    margin : 10px;
+.housings__container2 .title i{
+    font-size: 20px;
+    margin : 20px 10px 10px 10px;
     cursor: pointer;
 }
 
-#housings-section-container2 .boxes-container{
+.housings__container2 .three-boxes-pack{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-#housings-section-container2 .individual-boxes-from-boxes-container
+.housings__container2 .three-boxes-pack .individual-box
 {
     border: solid white 5px;
     border-radius: 15px;
@@ -346,14 +341,14 @@ margin-left: 20px;
     cursor: pointer;
 }
 
-#housings-section-container2 img{
+.housings__container2 img{
     height : 100%;
     width : 40%;
     border-radius: 15px 0 0 15px;
     object-fit: cover;
 }
 
-#housings-section-container2 .box-content {
+.housings__container2 .three-boxes-pack .individual-box .content {
     font-size: 12px;
     margin-left: 10px;
     display: flex;
@@ -362,25 +357,25 @@ margin-left: 20px;
     flex-wrap: wrap;
 }
 
-#housings-section-container2 .box-text h3 {
+.housings__container2 .three-boxes-pack .individual-box .content .text h3 {
     margin : 5px 5px 5px 0;
 }
 
 /* ACTIVITIES SECTION */
 
-#activities-section{
+.activities{
     max-width: 1440px;
     width: 97%;
     margin: auto;
     margin-top: 20px 0 20px 0;
 }
 
-#activities-section h1 {
+.activities h1 {
     cursor: pointer;
     margin-bottom: 20px;
 }
 
-#activities-section-container{
+.activities__container{
     display: grid;
     grid-template-areas:        
                                 "activity1 activity2 activity4 activity5"
@@ -396,13 +391,13 @@ margin-left: 20px;
     height: 500px;
 }
 
-#activities-section-container .boxes-container {
+.activities__container .individual-box{
     border-radius: 15px;
     cursor: pointer;
     box-shadow: 1px 1px 20px -10px black;
 }
 
-#activities-section-container img{
+.activities__container img{
     border-radius: 15px 15px 0 0;
     width: 100%;
     height: 100%;
@@ -411,7 +406,7 @@ margin-left: 20px;
 }
 
 
-#activities-section-container h3{
+.activities__container h3{
     font-size: 10px;
     border-radius: 0 0 20px 20px;
     box-shadow: 1px 1px 20px -10px black;
@@ -419,7 +414,7 @@ margin-left: 20px;
     margin: -10px 0 0 0;
 }
 
-#activities-section-container .items{
+.activities__container .individual-box .content{
     height: 100%;
     margin: 0;
 }
@@ -452,7 +447,7 @@ margin-left: 20px;
 
 /*  FOOTER  */
 
-#footer{
+.footer{
     width: 100%;
     margin: auto;
     margin-top: 80px;
@@ -461,10 +456,9 @@ margin-left: 20px;
     justify-content: center;
     align-items: center;
     background-color: grey;
-
 }
 
-#footer #footer-container{
+.footer__container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -472,18 +466,17 @@ margin-left: 20px;
     max-width: 1440px;
 }
 
-#footer #footer-container .footer-boxes{
+.footer__container .boxes{
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
-#footer #footer-container .footer-boxes h4{
+.footer__container .boxes h4{
     cursor: pointer;
 }
 
-#footer #footer-container .footer-boxes a{
-    text-decoration: underline;
+.footer__container .boxes a{
     cursor: pointer;
 }
 
@@ -495,7 +488,7 @@ margin-left: 20px;
 /* MEDIA QUERIES */
 
 /* breakpoints Bootstrap :
-X-Small <576px >>> IPHONE 8 >>>> viewport 375*667
+X-Small <576px 
 Small   ≥576px  
 Medium  ≥768px
 Large   ≥992px
@@ -510,7 +503,7 @@ Extra extra large   ≥1400px */
 
 @media screen and (max-width: 1200px){
 
-    #housings-section {
+    .housings {
         grid-template-columns: 1fr;
         row-gap: 30px;
         grid-template-areas: 
@@ -518,18 +511,18 @@ Extra extra large   ≥1400px */
         "container1";
     }
 
-    #housings-section-container2{
+    .housings__container2{
         flex-direction: row;
         justify-content: center;
         margin: 0;
         padding: 0 15px 15px 15px;
     }
     
-    #container2-title{
+    .housings__container2 .title{
         width: 97%;
     }
     
-    #housings-section-container2 .boxes-container{
+    .housings__container2 .three-boxes-pack{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -538,7 +531,7 @@ Extra extra large   ≥1400px */
         width: 100%;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container
+    .housings__container2 .three-boxes-pack .individual-box
     {
         width: 31%;
     }
@@ -547,7 +540,7 @@ Extra extra large   ≥1400px */
 @media screen and (max-width: 1018px){
 
 
-    #housings-section-container2 .individual-boxes-from-boxes-container
+    .housings__container2 .three-boxes-pack .individual-box
     {
         width: 30%;
     }
@@ -557,14 +550,17 @@ Extra extra large   ≥1400px */
 
     .header {
         display: grid;
-        justify-content: stretch;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "logo" "housings activities";
+        grid-template-areas: "logo logo" "housings activities";
     }
 
     .header__logo img{
         margin-top:0;
+    }
+
+    .header__logo{
+        text-align: center;
     }
     
     #navbar-item-housings {
@@ -611,23 +607,23 @@ Extra extra large   ≥1400px */
     }
 
 
-    #housings-section-container2 .individual-boxes-from-boxes-container
+    .housings__container2 .three-boxes-pack .individual-box
     {
         width: 30%;
     }
 
-    #housings-section-container2 .individual-boxes-from-boxes-container .box-text{
+    .housings__container2 .three-boxes-pack .individual-box .content .text{
         font-size: 11px;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container i{
+    .housings__container2 .three-boxes-pack .individual-box i{
         font-size: 12px;
     }
 
 }
 
 
-@media (max-width: 750px){   
+@media (max-width: 768px){   
 
     .search__filters{
         display: grid;
@@ -642,15 +638,15 @@ Extra extra large   ≥1400px */
         align-items: none;
     }
     
-    .search__filters__title{
+    .search__filters .title{
     font-size: 12px;
     }
     
-    .search__filters__category{
+    .search__filters .category{
         font-size: 15px;
     }
     
-    .search__filters__title{
+    .search__filters .title{
         grid-area: filters;
     }
     
@@ -681,7 +677,7 @@ Extra extra large   ≥1400px */
         margin: 11px 10px 0 0;
     }
 
-    #housings-section-container1{
+    .housings__container1{
         display : flex;
         border-radius: 0;
         border: 0;
@@ -690,59 +686,59 @@ Extra extra large   ≥1400px */
         background-color: white;
     }
     
-    #housings-section-container1 h1{
+    .housings__container1 h1{
         font-size: 40px;
     }
     
-    #housings-section-container1 .individual-boxes-from-boxes-container{
+    .housings__container1 .six-boxes-pack .individual-box{
         flex:100%;
         height: 550px;
         box-shadow: 1px 1px 20px -10px black;
     }
     
-    #housings-section-container1 .box-content{
+    .housings__container1 .six-boxes-pack .individual-box .content{
         font-size: 40px;
         padding-top: 25px;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container{
+    .housings__container2 .three-boxes-pack .individual-box{
         height : 250px;
         width: 100%;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container .box-content{
+    .housings__container2 .three-boxes-pack .individual-box .content{
         margin: 25px 0 10px 30px;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container .box-text{
+    .housings__container2 .three-boxes-pack .individual-box .content .text{
         font-size: 30px;
     }
     
-    #housings-section-container2 .individual-boxes-from-boxes-container i{
+    .housings__container2 .three-boxes-pack .individual-box i{
         font-size: 30px;
     }
     
-    #housings-section-container2{
+    .housings__container2{
         border: 0;
         border-radius: 0;
         box-shadow: none;
         padding : 0 30px 15px 30px;
     }
     
-    #housings-section-container2 h1{
+    .housings__container2 h1{
         font-size: 40px;
     }
     
-    #container2-title i{
+    .housings__container2 .title i{
         font-size: 50px;
         margin : 25px 10px 10px 10px;
     }
     
-    #activities-section{
+    .activities{
         width: 92%;
     }
     
-    #activities-section-container{
+    .activities__container{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -756,22 +752,22 @@ Extra extra large   ≥1400px */
         margin-bottom: 2200px;
     }
     
-    #activities-section-container .boxes-container{
+    .activities__container .individual-box{
         height: 380px;
         justify-content : space-between;
     }
     
-    #activities-section-container .boxes-container h3{
+    .activities__container .individual-box h3{
         font-size: 20px;
     }
     
-    #footer #footer-container{
+    .footer__container{
         display: inline-flex;
         flex-direction: column;
         padding-bottom: 35px;
     }
     
-    #footer #footer-container .footer-boxes{
+    .footer__container .boxes{
         padding: 0 0 0 35px;
     }
     
