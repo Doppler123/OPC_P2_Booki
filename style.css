@@ -24,35 +24,41 @@ header {
     max-width: 1440px;
     width: 97%;
     margin : auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.navbar-container {
-    display : flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.navbar-item {
-    display : flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
-    height : 60px;
-    
+    align-items: center;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    grid-template-rows: 40px;
+    grid-template-areas: "logo . housings activities";
+}
+
+#logo{
+    grid-area: logo;
+
+}
+
+#logo img{
+    margin-top:35px;
 }
 
 #navbar-item-housings {
-border-top: solid 2px black;
+    grid-area: housings;
+}
+#navbar-item-activities {
+    grid-area: activities;
 }
 
-#logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+#navbar-item-housings {
+    border-top: solid 2px black;
+    }
+
+.navbar-item{
+justify-self: flex-end;
+align-self: center;
+margin-left: 30px;
+padding-top: 20px;
 }
+
 
 /* SEARCH SECTION */
 
@@ -63,7 +69,7 @@ border-top: solid 2px black;
   }
 
 #section-title{
-    margin-block : 10px;
+    margin-top: 30px;
 }
 
 #main-title {
@@ -77,7 +83,6 @@ border-top: solid 2px black;
 #search-bar{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     margin-bottom: -10px;
 }
 
@@ -126,51 +131,39 @@ border-top: solid 2px black;
 #filters-bar{
     display: flex;
     flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+.category-filters{
+    border : 2px solid grey;
+    border-radius : 20px;
+    border-left: none;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 12px;
+    height: fit-content;
+    width:max-content;
+    padding: 0 20px 0 0;
 }
 
-#list-of-categories{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.category-filters i{
+    padding : 7px;
+    border-radius: 50%;
+    border: solid 1px rgb(112, 174, 255);
+    color : rgb(3, 118, 250);
+    background-color: rgb(112, 174, 255);
+    outline: solid 2px rgb(112, 174, 255);
+    cursor: pointer;
 }
-
-#filters-title{
-    padding : 10px 10px 10px 0;
-    font-size: 16px;
-    margin-right: -30px;
-    }
-    
-    .category-filters{
-        border : 2px solid grey;
-        border-radius : 20px;
-        border-left: none;
-        padding-right: 10px;
-        cursor: pointer;
-        margin-inline:  10px;
-        list-style-type: none;
-        font-size: 14px;
-    }
-    
-    .category-filters i{
-        padding : 7px;
-        border-radius: 50%;
-        border: solid 1px rgb(112, 174, 255);
-        color : rgb(3, 118, 250);
-        background-color: rgb(112, 174, 255);
-        outline: solid 2px rgb(112, 174, 255);
-        cursor: pointer;
-    }
-    
-    #information i {
-        color: rgb(112, 174, 255);
-        font-size: 14px;
-        padding: 5px 9px 5px 9px;
-        border: solid 1px black;
-        border-radius: 50%;
-        margin-right: 15px;
-    }
 
 /* information line */
+
+#information{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 #information i {
     color: blue;
@@ -178,8 +171,10 @@ border-top: solid 2px black;
     padding: 5px 9px 5px 9px;
     border: solid 1px black;
     border-radius: 100%;
-    margin-right: 15px;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px 0 0;
 }
 
 /*  HOUSINGS SECTION  */
@@ -188,13 +183,21 @@ border-top: solid 2px black;
     max-width: 1440px;
     width: 97%;
     margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start flex-end;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    display : grid;
+    grid-template-columns: 1.8fr 1fr;
+    column-gap: 30px;
+    grid-template-areas: 
+    "container1 container2";
 }
+
+#housings-section-container1 {
+    grid-area: container1;
+}
+
+#housings-section-container2 {
+    grid-area: container2;
+}
+
 
 #blue-star {
  color: blue;
@@ -212,7 +215,7 @@ border-top: solid 2px black;
     flex-wrap: wrap;
     flex : 2.3;
     border-radius: 15px 15px 15px 15px;
-    border: solid 1px;
+    box-shadow: 1px 1px 20px -10px black;
     padding : 0 30px 0 30px;
     background-color: grey;
 }
@@ -236,8 +239,8 @@ border-top: solid 2px black;
 
 #housings-section-container1 .individual-boxes-from-boxes-container
 {
-    flex:30%;
-    border: solid white;
+    flex:28%;
+    border: solid white 5px;
     border-radius: 15px;
     background-color: white;
     display: flex;
@@ -246,7 +249,6 @@ border-top: solid 2px black;
     flex-wrap: wrap;
     margin: 10px;
     padding-bottom: 5px;
-    font-size: 15px;
     height: 200px;
     cursor: pointer;
 }
@@ -263,7 +265,7 @@ border-top: solid 2px black;
 }
 
 #housings-section-container1 img{
-    height : 65%;
+    height : 60%;
     width : 100%;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
@@ -288,16 +290,27 @@ border-top: solid 2px black;
     flex-direction: column;
     flex-wrap: wrap;
     flex : 1;
-    border: solid 1px;
+    box-shadow: 1px 1px 20px -10px black;
     border-radius: 15px;
     padding : 0 30px 15px 30px;
-    margin-left: 30px;
     background-color: grey;
 }
 
-#housings-section-container2 h1{
+#container2-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#container2-title h1{
     cursor: pointer;
     }
+
+#container2-title i{
+    font-size: 30px;
+    margin : 10px;
+    cursor: pointer;
+}
 
 #housings-section-container2 .boxes-container{
     display: flex;
@@ -308,7 +321,7 @@ border-top: solid 2px black;
 
 #housings-section-container2 .individual-boxes-from-boxes-container
 {
-    border: solid white;
+    border: solid white 5px;
     border-radius: 15px;
     background-color: white;
     display: flex;
@@ -316,7 +329,6 @@ border-top: solid 2px black;
     justify-content: flex-start;
     margin: 10px 0 10px 0;
     flex-wrap: wrap;
-    font-size: 15px;
     height: 150px;
     cursor: pointer;
 }
@@ -391,10 +403,6 @@ border-top: solid 2px black;
     margin: 0;
 }
 
-#activities-section-container .container-title {
-    grid-area: title;
-}
-
 #activities-section-container #activity1{
     grid-area: activity1;
 }
@@ -449,7 +457,7 @@ border-top: solid 2px black;
 /*  FOOTER  */
 
 #footer{
-    max-width: 1440px;
+    max-width: 1550px;
     width: 100%;
     margin: auto;
     margin-top: 20px;
@@ -467,7 +475,7 @@ border-top: solid 2px black;
     justify-content: flex-start;
     margin-right: 200px;
     cursor: pointer;
-    padding-left: 20px;
+    padding-left: 60px;
 }
 
 #footer li{
@@ -486,37 +494,208 @@ Medium  ≥768px
 Large   ≥992px
 Extra large ≥1200px
 Extra extra large   ≥1400px */
-/* 
-@media screen and (max-width: 1440px){
 
-    #housings-section {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-        grid-template-areas: 
-        "container2"
-        "container1";
-      }
-      #housings-section-container1 {
-        grid-area: container1;
-      }
-      #housings-section-container2 {
-        grid-area: container2;
-      }
+@media screen and (max-width: 1400px){
+   
 
 }
 
 @media screen and (max-width: 1200px){
+
+
+
 }
 
 @media screen and (max-width: 992px){
+
+
+
 
 }
 
 @media screen and (max-width: 768px){
 
-} 
 
-@media screen and (max-width: 576px){
+
+    header {
+        max-width: 1440px;
+        width: 97%;
+        margin : auto;
+        display: grid;
+        justify-content: stretch;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo" "housings activities";
+    }
+    
+    #logo{
+        grid-area: logo;
+    
+    }
+    
+    #logo img{
+        margin-top:0;
+    }
+    
+    #navbar-item-housings {
+        grid-area: housings;    
+        padding-bottom: 20px;
+    }
+    #navbar-item-activities {
+        grid-area: activities;
+        padding-bottom: 20px;
+    }
+    
+    #navbar-item-housings {
+        border-top: 0;
+        border-bottom: solid 2px black;
+        }
+
+    .navbar-item{
+    justify-self: center;
+    align-self: none;
+    margin-left: 0px;
+    padding-top: 0px;
+    }
+
+    #search-bar{
+        justify-content: center;
+    }
+
+    #search-bar input{
+        width: 100%;
+    }
+
+    #filters-bar{
+        display: grid;
+        grid-template-areas: "filters .  " 
+                            "economic family " 
+                            "romantic ." 
+                            "pet-friendly .";
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 8fr;
+        gap : 0;
+        }
+        
+        #filters-title{
+        font-size: 12px;
+        }
+
+        .category-filters{
+            font-size: 15px;
+        }
+        
+        #filters-title{
+            grid-area: filters;
+        }
+        
+        #economic{
+            grid-area: economic;
+        }
+        
+        #family{
+            grid-area: family;
+        }
+        
+        #romantic{
+            grid-area: romantic;
+        }
+        
+        #pet-friendly{
+            grid-area: pet-friendly;
+        }
+
+#information{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#information i{
+    margin: 11px 10px 0 0;
+}
+
+#housings-section {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    grid-template-areas: 
+    "container2"
+    "container1";
+}
+
+#housings-section-container2 .individual-boxes-from-boxes-container{
+    height : 250px;
+}
+
+#housings-section-container2 .individual-boxes-from-boxes-container .box-content{
+    margin: 25px 0 10px 30px;
+}
+
+#housings-section-container2 .individual-boxes-from-boxes-container .box-text{
+    font-size: 30px;
+}
+
+#housings-section-container2 .individual-boxes-from-boxes-container i{
+    font-size: 25px;
+}
+
+#housings-section-container1{
+    display : flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 0;
+    border: 0;
+    background-color: white;
+    padding : 0 20px 0 20px;
+    box-shadow: none;
+}
+
+#housings-section-container1 h1{
+font-size: 40px;
+}
+
+
+#housings-section-container1 .individual-boxes-from-boxes-container
+{
+    flex:100%;
+    background-color: white;
+    margin: 10px;
+    padding-bottom: 5px;
+    height: 550px;
+    box-shadow: 1px 1px 20px -10px black;
+}
+
+#housings-section-container1 .box-content{
+    font-size: 40px;
+    padding-top: 25px;
+}
+
+
+#housings-section-container2{
+    display : flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 0;
+    border-radius: 0;
+    padding : 0 30px 15px 30px;
+    background-color: grey;
+    box-shadow: none;
+}
+
+#housings-section-container2 h1{
+    font-size: 40px;
+}
+
+#container2-title i{
+    font-size: 50px;
+    margin : 25px 10px 10px 10px;
+}
+    
+
+#activities-section{
+    width: 92%;
+}
 
 #activities-section-container{
     display: grid;
@@ -529,30 +708,58 @@ Extra extra large   ≥1400px */
     "activity4"
     "activity5"
     "activity6";
-    height: 1500px;
-    margin-bottom: 350px;
-}
-#activities-section-container #activity1{
-    grid-area: activity1;
 }
 
-#activities-section-container #activity2{
-    grid-area: activity2;
+#activities-section-container .boxes-container{
+    height: 380px;
+    justify-content : space-between;
 }
 
-#activities-section-container #activity3{
-    grid-area: activity3;
+#activities-section-container .boxes-container h3{
+    font-size: 20px;
 }
 
-#activities-section-container #activity4{
-    grid-area: activity4;
+#activities-section-container #activity1 img{
+    height: 70%;
 }
 
-#activities-section-container #activity5{
-    grid-area: activity5;
+#activities-section-container #activity2 img{
+    height: 70%;
 }
 
-#activities-section-container #activity6{
-    grid-area: activity6;
+#activities-section-container #activity3 img{
+    height: 70%;
 }
-} */
+
+#activities-section-container #activity4 img{
+    height: 70%;
+}
+
+#activities-section-container #activity5 img{
+    height: 70%;
+}
+
+#activities-section-container #activity6 img{
+    height: 70%;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: grey;
+}
+
+#footer ul{
+    padding-left: 35px;
+    width: 200px;
+}
+
+
+
+} 
+
+@media screen and (max-width: 576px){
+
+}

@@ -14,18 +14,18 @@
     <!-- HEADER  -->
 
     <header id="header">
-        <a href="index.html" id="logo">
-            <img src="./src/logo/Booki.png" alt="Booki Logo">
-        </a>
-        <div class="navbar-container">
-            <div class="navbar-item" id="navbar-item-housings">
-                <div class="line-on-hover"></div>
-                <a href="">Hébergements</a>
-            </div>
-            <div class="navbar-item" id="navbar-item-activities">
-                <div class="line-on-hover"></div>
-                <a href="">Activités</a>
-            </div>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./src/logo/Booki.png" alt="Booki Logo">
+            </a>
+        </div>
+        <div class="navbar-item" id="navbar-item-housings">
+            <div class="line-on-hover"></div>
+            <a href="">Hébergements</a>
+        </div>
+        <div class="navbar-item" id="navbar-item-activities">
+            <div class="line-on-hover"></div>
+            <a href="">Activités</a>
         </div>
 
     </header>
@@ -48,30 +48,34 @@
         <br>
 
         <div id="filters-bar">
-            <h2 id="filters-title">Filtres</h2>
-            <ul id="list-of-categories">
-                <li class="category-filters" id="economic">
-                    <i class="fa-solid fa-money-bill-wave" id="money-logo"></i>
-                    Économique
-                </li>
-                <li class="category-filters" id="family">
-                    <i class="fa-solid fa-child" id="family-logo"></i>
-                    Familial
-                </li>
-                <li class="category-filters" id="romantic">
-                    <i class="fa-solid fa-heart" id="heart-logo"></i>
-                    Romantique
-                </li>
-                <li class="category-filters" id="pet-friendly">
-                    <i class="fa-solid fa-dog" id="dog-logo"></i>
-                    Animaux autorisés
-                </li>
-            </ul>
+            <div id="filters-title">
+                <h3>Filtres</h3>
+            </div>
+            <div class="category-filters" id="economic">
+                <i class="fa-solid fa-money-bill-wave" id="money-logo"></i>
+                Économique
+            </div>
+            <div class="category-filters" id="family">
+                <i class="fa-solid fa-child" id="family-logo"></i>
+                Familial
+            </div>
+            <div class="category-filters" id="romantic">
+                <i class="fa-solid fa-heart" id="heart-logo"></i>
+                Romantique
+            </div>
+            <div class="category-filters" id="pet-friendly">
+                <i class="fa-solid fa-dog" id="dog-logo"></i>
+                Animaux autorisés
+            </div>
         </div>
 
         <div id="information">
-            <i class="fas fa-info" id="info-logo"></i>
-            Plus de 500 logements sont disponibles dans cette ville
+            <div id="info-logo">
+                <i class="fas fa-info"></i>
+            </div>
+            <div id="information-text">
+                <p> Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </div>
 
     </section>
@@ -207,8 +211,10 @@
 
         <div id="housings-section-container2">
 
-            <h1 class="container-title">Les plus populaires</h1>
-            <div id="black-star"></div>
+            <div id="container2-title">
+                <h1 class="container-title">Les plus populaires</h1>
+                <i class="fa-solid fa-star" id="black-star"></i>
+            </div>
 
             <div class="boxes-container">
                 <div class="individual-boxes-from-boxes-container">
@@ -342,21 +348,21 @@
     <footer id="footer">
         <ul id="about">
             <h4>A propos</h4>
-            <li>Fonctionnement du site</li>
-            <li>Conditions générales de vente</li>
-            <li>Données et confidentialité</li>
+            <li><a href="">Fonctionnement du site</a></li>
+            <li><a href=""></a>Conditions générales de vente</a></li>
+            <li><a href=""></a>Données et confidentialité</a></li>
         </ul>
 
         <ul id="our-housings">
             <h4>Nos hébergements</h4>
-            <li>Charte qualité</li>
-            <li>Soumettre votre hôtel</li>
+            <li><a href=""></a>Charte qualité</a></li>
+            <li><a href=""></a>Soumettre votre hôtel</a></li>
         </ul>
 
         <ul id="assistance">
             <h4>Assistance</h4>
-            <li>Centre d'aide</li>
-            <li>Nous contacter</li>
+            <li><a href=""></a>Centre d'aide</a></li>
+            <li><a href=""></a>Nous contacter</a></li>
         </ul>
     </footer>
 
