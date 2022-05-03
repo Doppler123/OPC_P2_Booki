@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
@@ -21,13 +22,12 @@
         </div>
         <div class="navbar-item" id="navbar-item-housings">
             <div class="line-on-hover"></div>
-            <a href="">Hébergements</a>
+            <a href="#housings-section-container2">Hébergements</a>
         </div>
         <div class="navbar-item" id="navbar-item-activities">
             <div class="line-on-hover"></div>
-            <a href="">Activités</a>
+            <a href="#activities-section">Activités</a>
         </div>
-
     </header>
 
     <!-- SEARCH SECTION  -->
@@ -292,78 +292,69 @@
 
         <div id="activities-section-container">
             <div class="boxes-container" id="activity1">
-                <img src="./src/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port"
-                    class="housing-image">
-                <h3 class="housing-title">
-                    Vieux Port
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
+                    <h3>Vieux Port</h3>
+                </div>
             </div>
-
             <div class="boxes-container" id="activity2">
-                <img src="./src/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues"
-                    class="housing-image">
-                <h3 class="housing-title">
-                    Fort de Pomègues
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
+                    <h3>Fort de Pomègues</h3>
+                </div>
             </div>
-
             <div class="boxes-container" id="activity3">
-                <img src="./src/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul"
-                    class="housing-image">
-                <h3 class="housing-title">
-                    Îles du Frioul
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul">
+                    <h3>Îles du Frioul</h3>
+                </div>
             </div>
-
             <div class="boxes-container" id="activity4">
-                <img src="./src/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                    alt="Parc National des Calanques" class="housing-image">
-                <h3 class="housing-title">
-                    Parc National des Calanques
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                        alt="Parc National des Calanques">
+                    <h3>Parc National des Calanques</h3>
+                </div>
             </div>
-
             <div class="boxes-container" id="activity5">
-                <img src="./src/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde"
-                    class="housing-image">
-                <h3 class="housing-title">
-                    Notre-Dame-de-la-Garde
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        alt="Notre-Dame-de-la-Garde">
+                    <h3>Notre-Dame-de-la-Garde</h3>
+                </div>
             </div>
-
             <div class="boxes-container" id="activity6">
-                <img src="./src/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp"
-                    class="housing-image">
-                <h3 class="housing-title">
-                    Parc Longchamp
-                </h3>
+                <div class="items">
+                    <img src="./src/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
+                    <h3>Parc Longchamp</h3>
+                </div>
             </div>
-
         </div>
-
     </section>
 
     <!-- FOOTER  -->
 
     <footer id="footer">
-        <ul id="about">
-            <h4>A propos</h4>
-            <li><a href="">Fonctionnement du site</a></li>
-            <li><a href=""></a>Conditions générales de vente</a></li>
-            <li><a href=""></a>Données et confidentialité</a></li>
-        </ul>
+        <div id="footer-container">
+            <div class="footer-boxes" id="about">
+                <h4 class="footer-boxes-title">A propos</h4>
+                <a class="footer-boxes-link">Fonctionnement du site</a>
+                <a class="footer-boxes-link">Conditions générales de vente</a>
+                <a class="footer-boxes-link">Données et confidentialité</a>
+            </div>
 
-        <ul id="our-housings">
-            <h4>Nos hébergements</h4>
-            <li><a href=""></a>Charte qualité</a></li>
-            <li><a href=""></a>Soumettre votre hôtel</a></li>
-        </ul>
+            <div class="footer-boxes" id="our-housings">
+                <h4 class="footer-boxes-title">Nos hébergements</h4>
+                <a class="footer-boxes-link">Charte qualité</a>
+                <a class="footer-boxes-link">Soumettre votre hôtel</a>
+            </div>
 
-        <ul id="assistance">
-            <h4>Assistance</h4>
-            <li><a href=""></a>Centre d'aide</a></li>
-            <li><a href=""></a>Nous contacter</a></li>
-        </ul>
+            <div class="footer-boxes" id="assistance">
+                <h4 class="footer-boxes-title">Assistance</h4>
+                <a class="footer-boxes-link">Centre d'aide</a>
+                <a class="footer-boxes-link">Nous contacter</a>
+            </div>
+        </div>
     </footer>
 
 </body>
