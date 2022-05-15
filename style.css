@@ -10,12 +10,8 @@ a{
     text-decoration: none;
 }
 
-h1{
-    font-size: 20px;
-}
-
 h2{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /* HEADER */
@@ -250,11 +246,11 @@ animation: blink 2s ease-in-out;
     font-weight: bold;
 }
 
-#blue-star {
+.blue-star {
  color: #0065FC;
 }
 
-#grey-star {
+.grey-star {
     color: #F2F2F2;
 }
 
@@ -271,15 +267,18 @@ animation: blink 2s ease-in-out;
     background-color: #F2F2F2;
 }
 
-.housings__container1 h1{
-    margin-left: 10px;
+.housings__container1 h2{
+    margin-left: 15px;
     cursor: pointer;
 }
 
-.housings__container1 h2{
-    margin-left: 10px;
+.unfolder p{
+    margin-left: 15px;
     cursor: pointer;
-    }
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 .housings__container1 .six-boxes-pack{
     display: flex;
@@ -333,9 +332,6 @@ animation: blink 2s ease-in-out;
     margin-bottom: 5px;
 }
 
-.unfolder h2{
-    margin-top: 40px;
-}
 
 /* housings container 2  */
 
@@ -355,8 +351,9 @@ animation: blink 2s ease-in-out;
     justify-content: space-between;
 }
 
-.housings__container2 .title h1{
+.housings__container2 .title h2{
     cursor: pointer;
+    margin-left: 2px;
     }
 
 .housings__container2 .title i{
@@ -414,7 +411,7 @@ animation: blink 2s ease-in-out;
     margin-top: 30px;
 }
 
-.activities h1 {
+.activities h2 {
     cursor: pointer;
     margin-bottom: 20px;
     margin-left: 12px;
@@ -697,7 +694,7 @@ animation: blink 2s ease-in-out;
         margin-left: 0;
       }
 
-    .search__title h1{
+    .search__title h2{
         margin-top: 40px;
       }
 
@@ -770,7 +767,7 @@ animation: blink 2s ease-in-out;
         background-color: white;
     }
     
-    .housings__container1 h1{
+    .housings__container1 h2{
         font-size: 25px;
     }
        
@@ -805,7 +802,7 @@ animation: blink 2s ease-in-out;
         margin: 0 -11px 0 -11px;
     }
     
-    .housings__container2 h1{
+    .housings__container2 h2{
         font-size: 25px;
     }
 
@@ -832,7 +829,7 @@ animation: blink 2s ease-in-out;
         font-size: 12px;
     }
 
-    .unfolder h2{
+    .unfolder p{
         font-size: 18px;
         margin-top: 20px;
         margin-left: 17px;
@@ -842,7 +839,7 @@ animation: blink 2s ease-in-out;
         width : 88%;
     }
 
-    .activities h1 {
+    .activities h2 {
         font-size: 25px;
         margin-left: 0;
     }
