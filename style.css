@@ -635,6 +635,10 @@ animation: blink 2s ease-in-out;
 
 @media (max-width: 768px){   
 
+        html{
+    display: flex;
+        }
+
     .header {
         display: flex;
         flex-direction: column;
@@ -865,7 +869,7 @@ animation: blink 2s ease-in-out;
 
     .unfolder p{
         font-size: 18px;
-        padding-left: 13px;
+        padding-left: 5px;
         margin-top: 20px;
     }
 
@@ -957,7 +961,7 @@ animation: blink 2s ease-in-out;
         font-size: 17px;
         padding-left: 25px;
     }
-    
+
     .footer__container{
         display: inline-flex;
         flex-direction: column;
