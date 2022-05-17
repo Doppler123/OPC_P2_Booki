@@ -53,6 +53,14 @@ h2{
 
 .header__navbar-items a {
     font-size: 18px;
+    color: black;
+}
+
+#navbar-item-housings:hover > a {
+    color: #0065FC;
+}
+
+#navbar-item-activities:hover > a {
     color: #0065FC;
 }
 
@@ -700,6 +708,7 @@ animation: blink 2s ease-in-out;
 
     .search__bar{
     justify-content: center;
+    margin-left: 0;
     }
 
     .search__bar input{
@@ -745,7 +754,6 @@ animation: blink 2s ease-in-out;
         margin-bottom: 10px;
     }
 
-
     .search__information{
         display: flex;
         flex-direction: row;
@@ -757,18 +765,27 @@ animation: blink 2s ease-in-out;
         margin: 11px 10px 0 0;
     }
 
+    .housings{
+        width: 100%;
+    }
 
     .housings__container1{
         display : flex;
         border-radius: 0;
         border: 0;
         box-shadow: none;
-        padding : 0 5px 0 5px;
+        padding : 0;
         background-color: white;
+
+    }
+
+    .housings__container1 h2{
+        font-size: 25px;
     }
     
     .housings__container1 h2{
         font-size: 25px;
+        padding-left: 13px;
     }
        
     .housings__container1 h3{
@@ -777,16 +794,33 @@ animation: blink 2s ease-in-out;
 
     .housings__container1 p{
         font-size: 17px;
+        
     }
 
     .housings__container1 i{
         font-size: 12px;
     }
 
+    .six-boxes-pack-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .housings__container1 .six-boxes-pack{
+        margin : 0;
+        padding: 0;
+        width: 90%;
+    }
+
     .housings__container1 .six-boxes-pack .individual-box{
         flex: 100%;
         height: 250px;
         box-shadow: 1px 1px 20px -10px black;
+        margin : 0 0 20px 0;
+        padding: 0;
+        width: 100%;
     }
     
     .housings__container1 .six-boxes-pack .individual-box .content{
@@ -798,23 +832,23 @@ animation: blink 2s ease-in-out;
         border: 0;
         border-radius: 0;
         box-shadow: none;
-        padding : 0 15px 15px 15px;
-        margin: 0 -11px 0 -11px;
+        width: 100%;
+        padding: 0 0 30px 0;     
     }
     
     .housings__container2 h2{
         font-size: 25px;
+        padding-left: 13px;
     }
 
-    
     .housings__container2 .title i{
         font-size: 20px;
-        margin : 20px 10px 0px 10px;
+        margin : 25px 30px 0px 10px;
     }
     
     .housings__container2 .three-boxes-pack .individual-box{
         height : 175px;
-        width: 100%;
+        width: 89%;
     }
     
     .housings__container2 .three-boxes-pack .individual-box .content{
@@ -831,8 +865,8 @@ animation: blink 2s ease-in-out;
 
     .unfolder p{
         font-size: 18px;
+        padding-left: 13px;
         margin-top: 20px;
-        margin-left: 17px;
     }
 
     .activities {
